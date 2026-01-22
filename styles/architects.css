@@ -37,9 +37,17 @@
 }
 
 .navbar ,
-.banner {
+.banner ,
+.team_and_features {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.banner_description,
+.team_and_features .our_features p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 26px;
 }
 
 .btn_primary{
@@ -53,6 +61,7 @@
 }
 
 /* Shared styles ends here  */
+
 
 /* Header styles starts here  */
 
@@ -82,7 +91,7 @@
 }
 /* navbar styles ends here */
 
-/* banner starts styles here */
+/* banner styles starts here */
 
 .banner_content{
     max-width: 862px;
@@ -94,23 +103,71 @@
     font-weight: bold;
     font-size: 4rem;
 }
-.banner_description{
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 26px;
-}
+
 .banner_image{
     width: 100%;
+    margin-bottom: 45px;
 }
 
-/* banner ends styles here */
+/* banner styles ends here */
+
+/* team and features section styles starts here */
+
+.team_and_features {
+    align-items: center;
+    margin-top: 85px;
+    gap: 73px;
+    
+}
+.team_and_features .team_img_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.team_and_features .our_features {
+    max-width: 537px;
+}
+
+.team_and_features .our_features #quick_list {
+    font-weight: 500;
+    font-size: 2.8rem;
+}
+.team_and_features .our_features .of_our_features {
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+.team_and_features .our_features .features {
+    color: #FF900E;
+}
+.team_and_features .our_features p{
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+/* team and features section styles ends here */
 
 
 /* Responsive Media Query */
 
 @media screen and (max-width:576px) {
     .navbar,
-    .nav_links_four {
+    
+    .team_and_features {
+        flex-direction: column;
+    }
+
+    .team_and_features .team_img_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* medium size device */
+
+@media screen and (min-width:576px) and (max-width:992px) {
+
+    .team_and_features {
         flex-direction: column;
     }
 }
